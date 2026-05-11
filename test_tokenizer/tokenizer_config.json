@@ -1,0 +1,29 @@
+{
+  "vocab_size": 2000,
+  "model_type": "BPE",
+  "byte_fallback": true,
+  "special_tokens": [
+    "<|pad|>",
+    "<|unk|>",
+    "<|bos|>",
+    "<|eos|>",
+    "<|im_start|>",
+    "<|im_end|>",
+    "<|begin_of_text|>",
+    "<|start_header_id|>",
+    "<|end_header_id|>",
+    "<|eot_id|>",
+    "<|thought_start|>",
+    "<|thought_end|>",
+    "<|tool_start|>",
+    "<|tool_end|>",
+    "<|tool_call|>",
+    "<|tool_result|>",
+    "<|fim_prefix|>",
+    "<|fim_middle|>",
+    "<|fim_suffix|>",
+    "<|fim_pad|>"
+  ],
+  "language": "Kinyarwanda",
+  "apostrophe_handling": "preserved_in_words"
+}

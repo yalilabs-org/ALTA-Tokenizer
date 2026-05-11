@@ -2,3 +2,4 @@ numpy==2.1.3
 regex==2024.7.24
 setuptools==72.2.0
 requests
+tokenizers>=0.13.0
