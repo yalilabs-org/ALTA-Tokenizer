@@ -27,12 +27,11 @@ from pathlib import Path
 from typing import Iterator, Union, List
 import multiprocessing
 
-from tokenizers import Tokenizer, normalizers, pre_tokenizers, decoders
+from tokenizers import Tokenizer, normalizers, pre_tokenizers, decoders, Regex
 from tokenizers.models import BPE
 from tokenizers.trainers import BpeTrainer
 from tokenizers.normalizers import NFD, StripAccents, Lowercase, Replace, Sequence
 from tokenizers.pre_tokenizers import Split, Sequence as PreSeq
-import regex
 
 
 def create_data_iterator(
@@ -178,7 +177,7 @@ def create_kinyarwanda_tokenizer(vocab_size: int = 65536) -> Tokenizer:
     """
 
     tokenizer.pre_tokenizer = pre_tokenizers.Split(
-        pattern=regex.compile(kinyarwanda_pattern.strip()),
+        pattern=Regex(kinyarwanda_pattern.strip()),
         behavior="isolated"
     )
 
